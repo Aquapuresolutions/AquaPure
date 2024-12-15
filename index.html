@@ -66,13 +66,8 @@
         </div>
     </div>
     <!-- Navigation Buttons -->
-        <button class="left-btn">←</button>
-<div class="priority-carousel">
-    <div class="priority-item">Priority 1</div>
-    <div class="priority-item">Priority 2</div>
-    <div class="priority-item">Priority 3</div>
-    <div class="priority-item">Priority 4</div>
-</div>
+          <button class="left-btn">&#9664;</button>
+  </div>
     <button class="carousel-nav right" onclick="scrollRight()">→</button>
 </section>
 
@@ -190,50 +185,38 @@
    <!-- JavaScript Section -->
 <script>
    // JavaScript for "Our Priorities" carousel (Left Button Only)
-// JavaScript for "Our Priorities" carousel (Left Button Only)
+// JavaScript for "Our Priorities" carousel
+const leftButton = document.querySelector('.left-btn');
+const carouselContainer = document.querySelector('.priority-carousel');
+const priorityItems = document.querySelectorAll('.priority-item');
 
-// Selectors for the left button and carousel
-const leftButton = document.querySelector('.left-btn'); // Left button
-const carouselContainer = document.querySelector('.priority-carousel'); // Carousel container
-const priorityItems = document.querySelectorAll('.priority-item'); // Carousel items
+let currentIndex = 0;
 
-let currentIndex = 0; // Current active item index
-
-// Calculate the width of a single priority item, including gaps
-function calculateItemWidth() {
-    const itemStyle = getComputedStyle(priorityItems[0]);
-    const itemWidth = priorityItems[0].offsetWidth; // Actual width of the item
-    const gap = parseInt(itemStyle.marginRight); // Get the right margin (gap between items)
-    return itemWidth + gap; // Total width (item + gap)
-}
-
-// Update the carousel position
-function updateCarouselPosition() {
-    const itemWidth = calculateItemWidth();
-    carouselContainer.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-}
-
-// Scroll left functionality
+// Slide left
 leftButton.addEventListener('click', () => {
     if (currentIndex > 0) {
-        currentIndex--; // Move to the previous item
-        updateCarouselPosition(); // Update the carousel position
+        currentIndex--;
+        updateCarousel();
     }
 });
 
-// Navigate to a specific page (kept for navigation functionality)
-function navigateToPage(url) {
-    if (typeof url === 'string' && url.trim() !== '') {
-        window.location.href = url; // Redirect to the provided URL
-    } else {
-        console.error('Invalid URL provided');
-    }
+// Update carousel position
+function updateCarousel() {
+    const itemWidth = priorityItems[0].offsetWidth + 20; // Include the gap between items
+    carouselContainer.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
 }
 
-// Attach click event to each priority item for navigation
+// Navigate to specific pages when clicking on items
+function navigateToPage(page) {
+    window.location.href = page; // Redirect to the specified page
+}
+
+// Attach click events to priority items
 priorityItems.forEach((item, index) => {
-    const pages = ['priority1.html', 'priority2.html', 'priority3.html', 'priority4.html'];
-    item.addEventListener('click', () => navigateToPage(pages[index]));
+    item.addEventListener('click', () => {
+        const pages = ['priority1.html', 'priority2.html', 'priority3.html', 'priority4.html'];
+        navigateToPage(pages[index]);
+    });
 });
    
 function scrollRight() {
