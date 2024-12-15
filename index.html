@@ -184,21 +184,31 @@
    <!-- JavaScript Section -->
 <script>
     function scrollLeft() {
-    const carousel = document.querySelector('.priority-carousel');
+    const carousel = document.querySelector('.priority-carousel'); // Select the carousel element
     if (carousel) {
-        // Log current scroll position
-        console.log("Before Scroll Left:", carousel.scrollLeft);
-        
-        // Scroll left by 300px
-        carousel.scrollBy({ left: -300, behavior: 'smooth' });
-        
-        // Log new scroll position
+        // Get the width of a single carousel item dynamically
+        const itemWidth = document.querySelector('.priority-item').offsetWidth + 20; // Adjust for margin
+
+        // Get the current scroll position
+        const currentScrollPosition = carousel.scrollLeft;
+
+        // Log current position before scrolling
+        console.log("Before Scroll Left:", currentScrollPosition);
+
+        // Scroll left, but ensure it doesn't go past the beginning
+        const newScrollPosition = Math.max(0, currentScrollPosition - itemWidth);
+        carousel.scrollTo({
+            left: newScrollPosition,
+            behavior: 'smooth', // Smooth scrolling animation
+        });
+
+        // Log the new scroll position after scrolling
         console.log("After Scroll Left:", carousel.scrollLeft);
     } else {
         console.error("Carousel element not found");
     }
 }
-
+   
 function scrollRight() {
     const carousel = document.querySelector('.priority-carousel');
     if (carousel) {
