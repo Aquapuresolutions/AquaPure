@@ -449,6 +449,22 @@ html {
     color: black;
     transition: 0.3s ease;
 }
+/* Button Styles */
+.about-us-button {
+    color: aqua;
+    border: 1px solid aqua;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.about-us-button:hover {
+    background-color: aqua;
+    color: black;
+    transition: 0.3s ease;
+}
 
 .shareholders {
     background: black; /* Adjust background if needed */
