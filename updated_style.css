@@ -174,20 +174,6 @@ body {
 }
 
 /* Navigation Buttons */
-button.left-btn {
-  position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: black;
-    color: white;
-    border: 2px solid white;
-    padding: 10px 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 1000;
-    font-size: 1.5rem;
-} 
-
 .carousel-nav {
     position: absolute;
     top: 50%;
@@ -202,19 +188,13 @@ button.left-btn {
     font-size: 1.5rem;
 }
 
-button. left-btn {
-left: 10px;
+.carousel-nav.left {
+    right: 10px;
 }
-
 .carousel-nav.right {
     right: 10px;
 }
-
-button.left-btn:hover {
-background-color: aqua;
-color: black;
-}
-    
+   
 .carousel-nav:hover {
     background-color: #00bcd4; /* Darker aqua on hover */
 }
