@@ -196,7 +196,7 @@ left: 10px;
     right: 10px;
 }
 
-button.left-btn:hover, .carousel-nav:hover {
+.carousel-nav:hover, button.left-btn:hover {
     background-color: #00bcd4; /* Darker aqua on hover */
 }
 
