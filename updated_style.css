@@ -421,10 +421,33 @@ html {
     scroll-behavior: smooth;
 }
 
+/* About Us Section */
 #about-us {
-    padding: 50px; /* Add some space for the section */
-    background-color: #f9f9f9; /* Light background for the section */
+    background-color: black;
+    color: white;
+    padding: 50px 20px;
     text-align: center;
+}
+
+#about-us h2 {
+    color: aqua;
+}
+
+.about-us-button {
+    color: aqua;
+    border: 1px solid aqua;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Optional: Add hover effect for button */
+.about-us-button:hover {
+    background-color: aqua;
+    color: black;
+    transition: 0.3s ease;
 }
 
 .shareholders {
