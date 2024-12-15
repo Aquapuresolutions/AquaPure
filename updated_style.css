@@ -174,8 +174,7 @@ body {
 }
 
 /* Navigation Buttons */
-.carousel-nav {
-button.left-btn { 
+.carousel-nav, button.left-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
