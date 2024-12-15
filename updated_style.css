@@ -175,6 +175,7 @@ body {
 
 /* Navigation Buttons */
 .carousel-nav {
+button.left-btn { 
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -188,15 +189,15 @@ body {
     font-size: 1.5rem;
 }
 
-.carousel-nav.left {
-    left: 10px;
+button. left-btn {
+left: 10px;
 }
 
 .carousel-nav.right {
     right: 10px;
 }
 
-.carousel-nav:hover {
+button.left-btn:hover, .carousel-nav:hover {
     background-color: #00bcd4; /* Darker aqua on hover */
 }
 
