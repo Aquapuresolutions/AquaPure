@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="updated_style.css">
+    <title>Background Image Test</title>
+</head>
+<body>
+    <div class="background"></div>
+</body>
+</html> 
+
+ <div class="nav">
+    <div class="logo">
+        <img src="https://i.postimg.cc/X7CfGrCc/IMG-5331-removebg-preview.png" alt="AquaPure Logo">
+        <span class="website-name">AquaPure Solutions</span>
+    </div>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+</div> 
+
+    <!-- Homepage Section -->
+    <section id="home" class="homepage">
+        <h1>Transforming Lives, One Drop at a Time</h1>
+        <p>At AquaPure Solutions, our mission is to transform lives by providing sustainable, innovative, and accessible clean water solutions to communities in need.</p>
+        <a href="#about" class="button">About Us</a>
+    </section>
+
+   
+<!-- Our Priorities Section -->
+<section id="priorities" class="priorities">
+    <h2>Our <span style="color: #28a745;">Priorities</span></h2>
+    <p>Swipe left or right to explore each priority and click to learn more.</p>
+  <div class="carousel-container">
+    <div class="priority-carousel">
+        <!-- Priority 1 -->
+        <div class="priority-item" onclick="navigateToPage('priority1.html')">
+            <img src="https://i.postimg.cc/hvjjCbQQ/953545-AE-0-F42-4-CB2-B4-BD-035-D0-AC55-C5-D.jpg" alt="Water Priority">
+            <div class="priority-content">
+                <h3>Water</h3>
+            </div>
+        </div>
+        <!-- Priority 2 -->
+        <div class="priority-item" onclick="navigateToPage('priority2.html')">
+            <img src="https://i.postimg.cc/q7Xwdnjv/EAD4-A1-BC-18-DC-4-F29-A842-605905004-C37.jpg" alt="Health Priority">
+            <div class="priority-content">
+                <h3>Health</h3>
+            </div>
+        </div>
+        <!-- Priority 3 -->
+        <div class="priority-item" onclick="navigateToPage('priority3.html')">
+            <img src="https://i.postimg.cc/T2ZtgRLG/FA42-DD81-85-DD-477-D-A360-7-E238-C89127-E.jpg" alt="Education Priority">
+            <div class="priority-content">
+                <h3>Education</h3>
+            </div>
+        </div>
+        <!-- Priority 4 -->
+        <div class="priority-item" onclick="navigateToPage('priority4.html')">
+            <img src="https://i.postimg.cc/L4ftdj5K/45547-A6-C-E328-474-E-8595-63838283823-E.jpg" alt="Sustainability Priority">
+            <div class="priority-content">
+                <h3>Sustainability</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation Buttons -->
+        <button class="carousel-nav left" onclick="scrollLeft()">←</button>
+    <button class="carousel-nav right" onclick="scrollRight()">→</button>
+</section>
+
+     <!-- Donation Section -->
+<section id="donate" class="donate">
+    <div class="donate-content">
+        <h2>Donate</h2>
+        <p>
+            When you make a gift to AquaPure Solutions, you help ensure clean water for the future. Your contribution transforms lives and communities through sustainable water solutions.
+        </p>
+        <div class="donate-buttons">
+            <a href="donate-now.html" class="donate-now">Donate Now</a>
+            <a href="give-monthly.html" class="give-monthly">Give Monthly</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact">
+    <h2>Our Impact: Transforming Lives Through Clean Water</h2>
+    <p>
+        At AquaPure Solutions, our mission is reflected in the lives we’ve touched and the changes we’ve made in communities across the globe.
+        Every drop of water we provide brings hope, progress, and a brighter future.
+    </p>
+
+    <div class="impact-stats">
+        <div class="stat">
+            <h3>15M+</h3>
+            <p>People gained access to clean, safe water through our initiatives in Kenya and beyond.</p>
+        </div>
+        <div class="stat">
+            <h3>40%</h3>
+            <p>Reduction in waterborne diseases like cholera and typhoid in the communities we serve.</p>
+        </div>
+        <div class="stat">
+            <h3>25M Goal</h3>
+            <p>By 2040, we aim to provide clean water to 25 million people worldwide.</p>
+        </div>
+    </div>
+
+    <h3>Economic Growth</h3>
+    <p>
+        Supported 1 million farmers with irrigation systems, leading to increased agricultural productivity. 
+        Created thousands of jobs in water resource management, engineering, and local distribution.
+    </p>
+
+    <h3>Environmental Impact</h3>
+    <p>
+        Reduced carbon emissions through solar-powered desalination and rainwater harvesting systems. 
+        Minimized the need for bottled water, protecting ecosystems from plastic waste.
+    </p>
+
+    <h3>Community Empowerment</h3>
+    <p>
+        Trained hundreds of community leaders to manage and maintain water systems, ensuring long-term sustainability. 
+        Taught clean water practices to over 50,000 individuals, empowering communities to take charge of their resources.
+    </p>
+
+    <h3>Looking Ahead</h3>
+    <p>
+        By 2030, AquaPure Solutions is committed to reducing waterborne diseases by an additional 30%, reaching underserved regions in Africa, Asia, and South America, 
+        and partnering with global organizations to scale our solutions for greater impact.
+    </p>
+
+    <div class="cta">
+        <p>Be part of the journey to transform lives with clean water. Join us in making a lasting difference.</p>
+        <a href="#support" class="cta-button">Support Our Mission</a>
+    </div>
+</section>
+
+<div class="page-divider"></div>
+
+    <!-- Shareholders Section -->
+<section id="shareholders" class="shareholders">
+    <h2>Our Shareholders</h2>
+    <div>
+        <p>Kenyan Government</p>
+        <p>Canadian Government</p>
+        <p>Water.org</p>
+        <p>UNICEF</p>
+        <p>Solar Water Solutions</p>
+        <p>Nestlé</p>
+        <p>Bill & Melinda Gates Foundation</p>
+        <p>Rotary International</p>
+        <p>African Development Bank</p>
+        <p>World Bank</p>
+        <p>Local Entrepreneurs</p>
+    </div>
+</section>
+
+    <div class="page-divider"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+        <p>Email: info@aquapuresolutions.com | Phone: <a href="tel:+14165551234">+1 (416) 555-1234</a></p>
+   
+    </section>
+
+<body>
+    <!-- Your content here -->
+    
+   <!-- JavaScript Section -->
+<script>
+    function scrollLeft() {
+    const carousel = document.querySelector('.priority-carousel');
+    if (carousel) {
+        // Log current scroll position
+        console.log("Before Scroll Left:", carousel.scrollLeft);
+        
+        // Scroll left by 300px
+        carousel.scrollBy({ left: -300, behavior: 'smooth' });
+        
+        // Log new scroll position
+        console.log("After Scroll Left:", carousel.scrollLeft);
+    } else {
+        console.error("Carousel element not found");
+    }
+}
+
+function scrollRight() {
+    const carousel = document.querySelector('.priority-carousel');
+    if (carousel) {
+        // Log current scroll position
+        console.log("Before Scroll Right:", carousel.scrollLeft);
+        
+        // Scroll right by 300px
+        carousel.scrollBy({ left: 300, behavior: 'smooth' });
+        
+        // Log new scroll position
+        console.log("After Scroll Right:", carousel.scrollLeft);
+    } else {
+        console.error("Carousel element not found");
+    }
+}
+</script>
+</body>
+</html>
