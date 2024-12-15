@@ -66,8 +66,7 @@
         </div>
     </div>
     <!-- Navigation Buttons -->
-          <button class="left-btn">&#9664;</button>
-  </div>
+   <button class="carousel-nav left" onclick="scrollLeft()">→</button>   
     <button class="carousel-nav right" onclick="scrollRight()">→</button>
 </section>
 
@@ -184,41 +183,53 @@
     
    <!-- JavaScript Section -->
 <script>
-   // JavaScript for "Our Priorities" carousel (Left Button Only)
-// JavaScript for "Our Priorities" carousel
-const leftButton = document.querySelector('.left-btn');
-const carouselContainer = document.querySelector('.priority-carousel');
-const priorityItems = document.querySelectorAll('.priority-item');
+  // JavaScript for "Our Priorities" carousel
 
-let currentIndex = 0;
+// Selectors for the left button and carousel
+const leftButton = document.querySelector('.carousel-nav.left'); // Left button
+const carouselContainer = document.querySelector('.priority-carousel'); // Carousel container
+const priorityItems = document.querySelectorAll('.priority-item'); // Carousel items
 
-// Slide left
-leftButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-    }
-});
+let currentIndex = 0; // Track the active item index
 
-// Update carousel position
-function updateCarousel() {
-    const itemWidth = priorityItems[0].offsetWidth + 20; // Include the gap between items
+// Calculate the width of a single priority item, including gaps
+function calculateItemWidth() {
+    const itemStyle = getComputedStyle(priorityItems[0]); // Get styles of the first item
+    const itemWidth = priorityItems[0].offsetWidth; // Actual width of the item
+    const gap = parseInt(itemStyle.marginRight); // Right margin as gap
+    return itemWidth + gap; // Total width (item + gap)
+}
+
+// Update the carousel position
+function updateCarouselPosition() {
+    const itemWidth = calculateItemWidth();
     carouselContainer.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
 }
 
-// Navigate to specific pages when clicking on items
-function navigateToPage(page) {
-    window.location.href = page; // Redirect to the specified page
+// Scroll left functionality
+leftButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--; // Move to the previous item
+        updateCarouselPosition(); // Update carousel position
+    } else {
+        console.log('Already at the start of the carousel!');
+    }
+});
+
+// Navigate to specific pages (optional for clickable items)
+function navigateToPage(url) {
+    if (typeof url === 'string' && url.trim() !== '') {
+        window.location.href = url; // Redirect to the provided URL
+    } else {
+        console.error('Invalid URL provided');
+    }
 }
 
-// Attach click events to priority items
+// Attach click event to each priority item for navigation
 priorityItems.forEach((item, index) => {
-    item.addEventListener('click', () => {
-        const pages = ['priority1.html', 'priority2.html', 'priority3.html', 'priority4.html'];
-        navigateToPage(pages[index]);
-    });
-});
-   
+    const pages = ['priority1.html', 'priority2.html', 'priority3.html', 'priority4.html'];
+    item.addEventListener('click', () => navigateToPage(pages[index]));
+}); 
 function scrollRight() {
     const carousel = document.querySelector('.priority-carousel');
     if (carousel) {
