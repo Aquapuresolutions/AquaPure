@@ -183,13 +183,12 @@
     
    <!-- JavaScript Section -->
 <script>
-   // JavaScript for "Our Priorities" carousel
+   // JavaScript for "Our Priorities" carousel (Left Button Only)
 
-// Selectors for buttons and carousel (Updated for your file names)
-const leftButton = document.querySelector('.carousel-nav.left'); // Left button (unchanged)
-const rightButton = document.querySelector('.carousel-nav.right'); // Right button (renamed to match your CSS and HTML)
-const carouselContainer = document.querySelector('.priority-carousel'); // Carousel container (unchanged)
-const priorityItems = document.querySelectorAll('.priority-item'); // Carousel items (unchanged)
+// Selectors for the left button and carousel
+const leftButton = document.querySelector('.carousel-nav.left'); // Left button
+const carouselContainer = document.querySelector('.priority-carousel'); // Carousel container
+const priorityItems = document.querySelectorAll('.priority-item'); // Carousel items
 
 let currentIndex = 0; // Current active item index
 
@@ -207,16 +206,15 @@ function updateCarouselPosition() {
     carouselContainer.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
 }
 
-// Scroll right button functionality
-rightButton.addEventListener('click', () => {
-    const visibleItems = Math.floor(carouselContainer.offsetWidth / calculateItemWidth());
-    if (currentIndex < priorityItems.length - visibleItems) {
-        currentIndex++;
+// Scroll left functionality
+leftButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
         updateCarouselPosition();
     }
 });
 
-// Navigate to a specific page
+// Navigate to a specific page (kept for navigation functionality)
 function navigateToPage(url) {
     if (typeof url === 'string' && url.trim() !== '') {
         window.location.href = url;
