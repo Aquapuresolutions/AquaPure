@@ -449,25 +449,19 @@ html {
     color: black;
     transition: 0.3s ease;
 }
-/* About Us Button - Transparent */
+/* Center the About Us Button */
 .about-us-button {
     color: aqua;
     border: 1px solid white;
-    padding: 10px 15px; /* Reduce padding to make it less wide */
+    padding: 10px 15px; /* Adjust button size */
     text-decoration: none;
     background-color: transparent;
     border-radius: 5px;
     display: inline-block;
-    width: auto; /* Automatically adjust width to fit the text */
-    text-align: center;
-    max-width: 150px; /* Optional: Set a maximum width */
-}
 
-/* Hover effect */
-.about-us-button:hover {
-    background-color: aqua;
-    color: black;
-    transition: 0.3s ease;
+    /* Centering styles */
+    margin: 0 auto; /* Horizontally center */
+    position: relative; /* Needed for some centering cases */
 }
 
 .shareholders {
